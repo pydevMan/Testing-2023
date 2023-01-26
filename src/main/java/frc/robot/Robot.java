@@ -28,7 +28,7 @@ public class Robot extends TimedRobot {
     // Drive with arcade drive.
     // That means that the Y axis drives forward
     // and backward, and the X turns left and right.
-    double speedMultiplier = gear.getSpeedMultipier();
+    double speedMultiplier = gear.getSpeedMultiplier();
     cons.robotDrive.arcadeDrive(cons.xbox.getLeftY() * speedMultiplier, -cons.xbox.getLeftX() * speedMultiplier);
 
     if (cons.xbox.getBButtonPressed() == true) {

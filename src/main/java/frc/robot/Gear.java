@@ -6,7 +6,7 @@ public class Gear {
 
     private double speedMultiplier = cons.maxMultiplier;
 
-    public double getSpeedMultipier() {
+    public double getSpeedMultiplier() {
         return speedMultiplier;
     }
 
