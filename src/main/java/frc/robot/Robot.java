@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 public class Robot extends TimedRobot {
 
   Constants cons = new Constants();
+  Gear gear = new Gear();
 
   @Override
   public void robotInit() {
@@ -27,6 +28,17 @@ public class Robot extends TimedRobot {
     // Drive with arcade drive.
     // That means that the Y axis drives forward
     // and backward, and the X turns left and right.
-    cons.robotDrive.arcadeDrive(cons.xbox.getLeftY() * 0.8, -cons.xbox.getLeftX() * 0.85);
+    double speedMultiplier = gear.getSpeedMultiplier();
+    cons.robotDrive.arcadeDrive(cons.xbox.getLeftY() * speedMultiplier, -cons.xbox.getLeftX() * speedMultiplier);
+
+    if (cons.xbox.getBButtonPressed() == true) {
+      // Gear Shift Logic
+      if (speedMultiplier > 0.5) {
+        gear.setSpeedMultiplier(cons.maxMultiplier);
+      } else {
+        gear.setSpeedMultiplier(cons.minMultiplier);
+      }
+    }
+
   }
 }

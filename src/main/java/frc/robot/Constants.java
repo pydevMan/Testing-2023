@@ -6,11 +6,15 @@ import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
 
 public class Constants {
 
-   //Motors 
+  // Speed Multiplier Variables
+  public final double minMultiplier = 0.2;
+  public final double maxMultiplier = 0.85;
+
+  // Motors 
   public final PWMSparkMax leftMotor = new PWMSparkMax(0);
   public final PWMSparkMax rightMotor = new PWMSparkMax(1);
 
-  //Drivetrain
+  // Drivetrain
   public final DifferentialDrive robotDrive = new DifferentialDrive(leftMotor, rightMotor);
 
   //Controller Constants
