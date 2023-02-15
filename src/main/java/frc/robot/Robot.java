@@ -63,7 +63,7 @@ public class Robot extends TimedRobot {
   // step one find the expectation value of your mother a massy partical by finding its 
   // wave function of the hermision quantum operator momentum, lol just kidding here 
   // i just set up what happens when that loud alarm goes off and starts our refrance frame
-  // where the inital gyro values are subtracted by the values now lol
+  // where the inital gyro values are subtractedn by the values now lol
   @Override
   public void autonomousInit(){
     //refrance for where we start at
